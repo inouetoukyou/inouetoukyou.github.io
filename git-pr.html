@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>git-pr</title>
+    <link rel="stylesheet" type="text/css" href="./css/paragraph.css" />
+</head>
+<body class="body">
+    <h1>How to Pull Request</h1>
+    <hr/>
+
+    <section>
+        <h2 class="p2">Step 1: Fork</h2>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <h3 class="p3">
+                        1.1 Fork in Github
+                    </h3>
+                    <div class="p4">
+                        Assume that the repository name is mobinets.github.io, and its author is mobinets<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-pr/01-fork-1.png" width="100%" hspace="3" /><br/>
+                    <h3 class="p3">
+                        1.2 Clone Your Fork
+                    </h3>
+                    <div class="p4">
+                        <strong class="color-red">Note: here, the username is "inouetoukyou", rather than "mobinets"</strong>
+                        <br/>
+                    </div>
+                    <div class="p4">
+                        Type command:
+                        <div class="p5">
+                            <code>git clone git@github.com:inouetoukyou/mobinets.github.io</code>
+                        </div>
+                    </div>
+                    <img src="./img/git-pr/01-fork-2.png" width="100%" hspace="3" /><br/>
+                    <img src="./img/git-pr/02-clone-fork-1.png" width="60%" hspace="3" /><br/>
+                    <h3 class="p3">
+                        1.3 Add Upstream Sources
+                    </h3>
+                    <div class="p4 color-blue">
+                        When the author upgrade his/her repository, it's recommended to keep ours up-to-date.
+                    </div>
+                    <div class="p4">
+                        1) Add upstream sources
+                    </div>
+                    <div class="p5">
+                        Type command:
+                    </div>
+                    <div class="p6">
+                        <code>git remote add upstream https://github.com/mobinets/mobinets.github.io</code>
+                    </div>
+                    <div class="p7 color-blue">
+                        prototype: git remote add upstream {author's repository}
+                    </div>
+                    <div class="p5">
+                        Type command:
+                    </div>
+                    <div class="p6">
+                        <code>git remote -v</code>
+                    </div>
+                    <div class="p7 color-blue">
+                        whether it adds successfully or not<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-pr/03-add-upstream-1.png" width="60%" hspace="3" /><br/>
+                    <div class="p4">
+                        2) Update <font color="red">(if necessary)</font> 
+                    </div>
+                    <div class="p5">
+                        Assume that one month after you forked, the author has upgrade the repository.
+                    </div>
+                    <div class="p5">
+                        Type command:
+                    </div>
+                    <div class="p6">
+                        <code>git pull upstream master</code>
+                    </div>
+                    <div class="p7 color-blue">
+                        update
+                    </div>
+                    <div class="p6">
+                        <code>git push origin master</code>
+                    </div>
+                    <div class="p7 color-blue">
+                        push the update to your fork<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-pr/04-update-1.png" width="60%" hspace="3" /><br/>
+                    <img src="./img/git-pr/04-update-2.png" width="60%" hspace="3" /><br/>
+                    <img src="./img/git-pr/04-update-3.png" width="60%" hspace="3" /><br/>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2 class="p2">Step 2: Pull Request</h2>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <h3 class="p3">2.1 Push Modifications to the Fork</h3>
+                    <div class="p4">
+                        For example, we modify "index.html" in <code>mobinets.github.io/people</code><br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-pr/05-pr-1.png" width="60%" hspace="3" /><br/>
+                    <div class="p4">
+                        Type command:
+                    </div>
+                    <div class="p5">
+                        <code>git status</code>
+                    </div>
+                    <div class="p6 color-blue">
+                        see status
+                    </div>
+                    <div class="p5">
+                        <code>git add index.html</code>
+                    </div>
+                    <div class="p5">
+                        <code>git commit -m "update Minghang's homepage url"</code>
+                    </div>
+                    <div class="p5">
+                        <code>git push origin master</code>
+                    </div>
+                    <div class="p6 color-blue">
+                        push modifications to the fork<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-pr/05-pr-2.png" width="60%" hspace="3" /><br/>
+                    <h3 class="p3">2.2 Pull Request</h3>
+                    <br/>
+                    <img src="./img/git-pr/05-pr-3.png" width="80%" hspace="3" /><br/><br/>
+                    <img src="./img/git-pr/05-pr-4.png" width="80%" hspace="3" /><br/><br/>
+                    <img src="./img/git-pr/05-pr-5.png" width="80%" hspace="3" /><br/><br/>
+                    <img src="./img/git-pr/05-pr-6.png" width="80%" hspace="3" /><br/><br/>
+                    <h3 class="p3">2.3 Update</h3>
+                    <div class="p4 color-blue">
+                        If the author merge our pull request, we can update our fork; if not, reset it.
+                    </div>
+                    <div class="p4">
+                        1) Merged
+                    </div>
+                    <div class="p5">
+                        Type command:
+                    </div>
+                    <div class="p6">
+                        <code>git pull upstream master:master</code>
+                    </div>
+                    <div class="p7 color-blue">
+                        <code>overwrite our fork</code>
+                    </div>
+                    <div class="p6">
+                        <code>git push origin master</code>
+                    </div>
+                    <br/>
+                    <img src="./img/git-pr/06-merge-1.png" width="50%" hspace="3" />
+                    <img src="./img/git-pr/06-merge-2.png" width="50%" hspace="3" />
+                    <img src="./img/git-pr/06-merge-3.png" width="50%" hspace="3" />
+                    <br/><br/>
+                    <div class="p4">
+                        2) Not Merged
+                    </div>
+                    <div class="p5">
+                        Type command:
+                    </div>
+                    <div class="p6">
+                        <code>git reset --hard HEAD^</code>
+                    </div>
+                    <div class="p6">
+                        <code>git push -f origin master</code>
+                    </div>
+                    <div class="p4">
+                        3) More about git<br/>
+                    </div>
+                    <div class="p5">
+                        <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank"> Git教程 - 廖雪峰的官方网站</a>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <hr/>
+        <div class="prev"><a href="./git-tutorial.html">Previous</a></div>
+    </footer>
+</body>
+</html>

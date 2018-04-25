@@ -5,222 +5,226 @@
     <title>git-toturial</title>
     <link rel="stylesheet" type="text/css" href="./css/paragraph.css" />
 </head>
-<body style="width:840px;margin-left: auto;margin-right: auto;">
+<body class="body">
     <h1>Using Git to Update Your Homepage</h1>
     <hr/>
 
     <section>
         <h2 class="p2">Step 1: Preliminaries (Windows)</h2>
-        <table style="table-layout: fixed">
-        <tbody>
-            <tr>
-                <h3 class="p3">1.1 Download</h3>
-                <div class="p4">
-                    1) <a href="https://notepad-plus-plus.org/" target="_blank">latest notepad++</a><br/>
-                </div>
-                <div class="p5"> 
-                    <strong class="color-red">Note: please choose 32-bit version</strong>
-                </div>
-                <div class="p4">
-                    2) <a href="https://git-scm.com/download/win" target="_blank">latest git</a>
-                </div>
-            </tr>
-            <tr>
-                <h3 class="p3">1.2 Installation</h3>
-                <div class="p4">
-                    1) Continue pressing <font color="red">"next"</font> when installing notepad++<br/>
-                </div>
-                <div class="p4">
-                    2) Cancel <font color="red">"Git GUI Here"</font><br/>
-                </div>
-                <div class="p4">
-                    3) Choose <font color="red">"Use Notepad++ as Git's default editor"</font><br/>
-                    <br/>
-                </div>
-                <img src="./img/git-toturial/01-install-git-1.png" width="45%" hspace="3" />
-                <img src="./img/git-toturial/01-install-git-2.png" width="45%" hspace="3" />
-            </tr>
-        </tbody>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <h3 class="p3">1.1 Download</h3>
+                    <div class="p4">
+                        1) <a href="https://notepad-plus-plus.org/" target="_blank">latest notepad++</a><br/>
+                    </div>
+                    <div class="p5"> 
+                        <strong class="color-red">Note: please choose 32-bit version</strong>
+                    </div>
+                    <div class="p4">
+                        2) <a href="https://git-scm.com/download/win" target="_blank">latest git</a>
+                    </div>
+                </tr>
+                <tr>
+                    <h3 class="p3">1.2 Installation</h3>
+                    <div class="p4">
+                        1) Continue pressing <font color="red">"next"</font> when installing notepad++<br/>
+                    </div>
+                    <div class="p4">
+                        2) Cancel <font color="red">"Git GUI Here"</font><br/>
+                    </div>
+                    <div class="p4">
+                        3) Choose <font color="red">"Use Notepad++ as Git's default editor"</font><br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-toturial/01-install-git-1.png" width="45%" hspace="3" />
+                    <img src="./img/git-toturial/01-install-git-2.png" width="45%" hspace="3" />
+                </tr>
+            </tbody>
         </table>
     </section>
 
     <section>
         <h2 class="p2">Step 2: Create Your Homepage</h2>
         <table style="table-layout: fixed">
-        <tbody>
-            <tr>
-                <h3 class="p3">2.1 Sign up</h3>
-                <div class="p4">
-                    <a href="https://github.com/join?source=header/" target="_blank">register a github account</a><br/>
-                </div>
-                <div class="p4"> 
-                    <strong class="color-red">Note: please remember your email & username</strong>
-                </div>
-            </tr>
-            <tr>
-                <h3 class="p3">2.2 Create Repository </h3>
-                <div class="p4"> 
-                    The suffix of repository name is "github.io", for example, my username is "inouetoukyou", so my repository name is "inouetoukyou.github.io".<br/>
-                    <br/>
-                </div>
-                <img src="./img/git-toturial/02-create-repository-1.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/02-create-repository-2.png" width="60%" hspace="3" />
-            </tr>
-        </tbody>
+            <tbody>
+                <tr>
+                    <h3 class="p3">2.1 Sign up</h3>
+                    <div class="p4">
+                        <a href="https://github.com/join?source=header/" target="_blank">register a github account</a><br/>
+                    </div>
+                    <div class="p4"> 
+                        <strong class="color-red">Note: please remember your email & username</strong>
+                    </div>
+                </tr>
+                <tr>
+                    <h3 class="p3">2.2 Create Repository </h3>
+                    <div class="p4"> 
+                        The suffix of repository name is "github.io", for example, my username is "inouetoukyou", so my repository name is "inouetoukyou.github.io".<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-toturial/02-create-repository-1.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/02-create-repository-2.png" width="60%" hspace="3" />
+                </tr>
+            </tbody>
         </table>
     </section>
 
     <section>
         <h2 class="p2">Step 3: Configure the Git</h2>
-        <table style="table-layout: fixed">
-        <tbody>
-            <tr>
-                <h3 class="p3">3.1 Set up Email and Username</h3>
-                <div class="p4">
-                    1) From a directory where you want to store your homepage files, right click, "Git Bash Here"<br/>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <h3 class="p3">3.1 Set up Email and Username</h3>
+                    <div class="p4">
+                        1) From a directory where you want to store your homepage files, right click, "Git Bash Here"<br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-toturial/03-config-git-1.png" width="60%" hspace="3" />
+                    <br/><br/>
+                    <div class="p4">
+                        2) Type command: <br/>
+                    </div>
+                    <div class="p5">
+                        <code>git config --global user.name "杨 明航(Minghang Yang)"</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        Set username, <font color="red">please use your own name, rather than "杨 明航(Minghang Yang)"</font>
+                    </div>
+                    <div class="p5">
+                        <code>git config --global user.email "inouetoukyou@xxxxxx"</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        Set email, <font color="red">please use your own email</font>
+                    </div>
+                    <div class="p4"> 
+                        <strong class="color-red">Note: you just need to config it once.</strong><br/>
+                        <br/>
+                    </div>
+                    <img src="./img/git-toturial/03-config-git-2.png" width="60%" hspace="3" />
                     <br/>
-                </div>
-                <img src="./img/git-toturial/03-config-git-1.png" width="60%" hspace="3" />
-                <br/><br/>
-                <div class="p4">
-                    2) Type command: <br/>
-                </div>
-                <div class="p5">
-                    <code>git config --global user.name "杨 明航(Minghang Yang)"</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    Set username, <font color="red">please use your own name, rather than "杨 明航(Minghang Yang)"</font>
-                </div>
-                <div class="p5">
-                    <code>git config --global user.email "inouetoukyou@xxxxxx"</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    Set email, <font color="red">please use your own email</font>
-                </div>
-                <div class="p4"> 
-                    <strong class="color-red">Note: you just need to config it once.</strong><br/>
+                </tr>
+                <tr>
+                    <h3 class="p3">3.2 Generate a SSH Key</h3>
+                    <div class="p4">
+                        1) Type command: <br/>
+                    </div>
+                    <div class="p5">
+                        <code>ssh-keygen.exe</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        Generate key
+                    </div>
+                    <div class="p4"> 
+                        <strong class="color-red">Note: it's recommended to set up a password. </strong><br/>
+                    </div>
+                    <div class="p4">
+                        2) Add the public key to github : <br/>
+                    </div>
+                    <div class="p5">
+                        By default, the file <code>"id_rsa.pub"</code> is in <code>"C:\Users\{Your User Name}\.ssh"</code><br/>
+                    </div>
+                    <div class="p5">
+                        Open it and copy the key.<br/>
+                    </div>
+                    <div class="p5">
+                        Paste it to GitHub.<br/>
+                    </div>
                     <br/>
-                </div>
-                <img src="./img/git-toturial/03-config-git-2.png" width="60%" hspace="3" />
-                <br/>
-            </tr>
-            <tr>
-                <h3 class="p3">3.2 Generate a SSH Key</h3>
-                <div class="p4">
-                    1) Type command: <br/>
-                </div>
-                <div class="p5">
-                    <code>ssh-keygen.exe</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    Generate key
-                </div>
-                <div class="p4"> 
-                    <strong class="color-red">Note: it's recommended to set up a password. </strong><br/>
-                </div>
-                <div class="p4">
-                    2) Add the public key to github : <br/>
-                </div>
-                <div class="p5">
-                    By default, the file <code>"id_rsa.pub"</code> is in <code>"C:\Users\{Your User Name}\.ssh"</code><br/>
-                </div>
-                <div class="p5">
-                    Open it and copy the key.<br/>
-                </div>
-                <div class="p5">
-                    Paste it to GitHub.<br/>
-                </div>
-                <br/>
-                <img src="./img/git-toturial/04-ssh-pub-1.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/04-ssh-pub-2.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/04-ssh-pub-3.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/04-ssh-pub-4.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/04-ssh-pub-5.png" width="30%" hspace="3" />
-                <img src="./img/git-toturial/04-ssh-pub-6.png" width="30%" hspace="3" />
-                <br/>
-        </tbody>
+                    <img src="./img/git-toturial/04-ssh-pub-1.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/04-ssh-pub-2.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/04-ssh-pub-3.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/04-ssh-pub-4.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/04-ssh-pub-5.png" width="30%" hspace="3" />
+                    <img src="./img/git-toturial/04-ssh-pub-6.png" width="30%" hspace="3" />
+                    <br/>
+            </tbody>
         </table>
     </section>
 
     <section>
         <h2 class="p2">Step 4: Push</h2>
-        <table style="table-layout: fixed">
-        <tbody>
-            <tr>
-                <h3 class="p3">4.1 Clone Your Repository</h3>
-                <div class="p4">
-                    Type command: <br/>
-                </div>
-                <div class="p5">
-                    <code>git clone git@github.com:inouetoukyou/inouetoukyou.github.io</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    prototype: git clone git@github.com:{your user name}/{your repository name}
-                </div>
-                <div class="p5">
-                    <code>cd inouetoukyou.github.io</code><br/>
-                </div>
-                <br/>
-                <img src="./img/git-toturial/05-clone-1.png" width="60%" hspace="3" />
-                <br/>
-                <h3 class="p3">4.2 Build Your Homepage</h3>
-                <div class="p4">
-                	1) Modify index.html
-                </div>
-                <div class="p5">
-                    Create a file <code>"index.html"</code>, then you type command: <br/>
-                </div>
-                <div class="p5">
-                	<code>git status</code>
-                </div>
-                <div class="p6 color-blue">
-                    See current status.<br/>
-                </div>
-                <div class="p5">
-                    <code>git add index.html</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    If you update many files (add, modify or delete), you can type: <br/>
-                </div>
-                <div class="p7 color-blue">
-                    <code>git add - A</code><br/>
-                </div>
-                <div class="p5">
-                    <code>git commit -m "init index.html"</code><br/>
-                </div>
-                <div class="p6 color-blue">
-                    prototype: git commit -m "{Your commit}"
-                </div>
-                <div class="p7"> 
-                    <strong class="color-red">Note: {Your commit} is necessary</strong>
-                </div>
-                <div class="p5">
-                    <code>git push origin master</code><br/>
-                </div>
-                <div class="p6">
-                	<strong class="color-red">Note: you can type <code>gitk</code> to see your update logs.</strong>
-                </div>
-                <br/>
-                <img src="./img/git-toturial/06-push-1.png" width="60%" hspace="3" />
-                <img src="./img/git-toturial/06-push-2.png" width="60%" hspace="3" />
-                <img src="./img/git-toturial/06-push-3.png" width="60%" hspace="3" />
-                <br/><br/>
-                <div class="p4">
-                    2) Visit the homepage<br/>
-                </div>
-                <div class="p5">
-                    <a href="https://inouetoukyou.github.io" target="_blank">https://inouetoukyou.github.io</a>
-                </div>
-                <div class="p4">
-                    3) More about git<br/>
-                </div>
-                <div class="p5">
-                    <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank"> Git教程 - 廖雪峰的官方网站</a>
-                </div>
-            </tr>
-        </tbody>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <h3 class="p3">4.1 Clone Your Repository</h3>
+                    <div class="p4">
+                        Type command: <br/>
+                    </div>
+                    <div class="p5">
+                        <code>git clone git@github.com:inouetoukyou/inouetoukyou.github.io</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        prototype: git clone git@github.com:{your user name}/{your repository name}
+                    </div>
+                    <div class="p5">
+                        <code>cd inouetoukyou.github.io</code><br/>
+                    </div>
+                    <br/>
+                    <img src="./img/git-toturial/05-clone-1.png" width="60%" hspace="3" />
+                    <br/>
+                    <h3 class="p3">4.2 Build Your Homepage</h3>
+                    <div class="p4">
+                    	1) Modify index.html
+                    </div>
+                    <div class="p5">
+                        Create a file <code>"index.html"</code>, then you type command: <br/>
+                    </div>
+                    <div class="p5">
+                    	<code>git status</code>
+                    </div>
+                    <div class="p6 color-blue">
+                        See current status.<br/>
+                    </div>
+                    <div class="p5">
+                        <code>git add index.html</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        If you update many files (add, modify or delete), you can type: <br/>
+                    </div>
+                    <div class="p7 color-blue">
+                        <code>git add - A</code><br/>
+                    </div>
+                    <div class="p5">
+                        <code>git commit -m "init index.html"</code><br/>
+                    </div>
+                    <div class="p6 color-blue">
+                        prototype: git commit -m "{Your commit}"
+                    </div>
+                    <div class="p7"> 
+                        <strong class="color-red">Note: {Your commit} is necessary</strong>
+                    </div>
+                    <div class="p5">
+                        <code>git push origin master</code><br/>
+                    </div>
+                    <div class="p6">
+                    	<strong class="color-red">Note: you can type <code>gitk</code> to see your update logs.</strong>
+                    </div>
+                    <br/>
+                    <img src="./img/git-toturial/06-push-1.png" width="60%" hspace="3" />
+                    <img src="./img/git-toturial/06-push-2.png" width="60%" hspace="3" />
+                    <img src="./img/git-toturial/06-push-3.png" width="60%" hspace="3" />
+                    <br/><br/>
+                    <div class="p4">
+                        2) Visit the homepage<br/>
+                    </div>
+                    <div class="p5">
+                        <a href="https://inouetoukyou.github.io" target="_blank">https://inouetoukyou.github.io</a>
+                    </div>
+                    <div class="p4">
+                        3) More about git<br/>
+                    </div>
+                    <div class="p5">
+                        <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank"> Git教程 - 廖雪峰的官方网站</a>
+                    </div>
+                </tr>
+            </tbody>
         </table>
     </section>
-
+    
+    <footer>
+        <hr/>
+        <div class="next"><a href="./git-pr.html">Next</a></div>
+    </footer>
 </body>
 </html>
