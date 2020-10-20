@@ -23,7 +23,7 @@ function getIndices(items) {
     // store every line in links
     let links = items.split(/[\n]/);
     let n = links.length
-    // parse links[i] to get a href and replace links[i] by this herf
+    // parse links[i] to get a href and replace links[i] by this href
     for (let i = 0; i < n; i++) {
         let link = links[i].split(/[\s]+/);
         if (link.length != 2) {
