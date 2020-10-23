@@ -26,10 +26,8 @@ function getIndices(items) {
     // parse links[i] to get a href and replace links[i] by this href
     for (let i = 0; i < n; i++) {
         let link = links[i].split(/[\s]+/);
-        if (link.length != 2) {
-            continue
-        }
-        links[i] = linkPrefix + link[1] + '.cpp' + linkMiddle + numberWidth(link[0], 4) + ' ' + titleCase(link[1]) + linkSuffix
+        links[i] = linkPrefix + titleCase(link.slice(1)) + '.cpp' + 
+            linkMiddle + numberWidth(link[0], 4) + ' ' +link.slice(1).join(' ') + linkSuffix;
     }
     return links.join('<br/>')
 }
@@ -53,13 +51,13 @@ function numberWidth(n, width) {
     return result + n
 }
 
-// convert title to first letter Upper
-// for example, tow-sum --> Two Sum
+// convert title to first letter Lower
+// for example, Two Sum --> tow-sum
 function titleCase(s) {
-    let i, ss = s.toLowerCase().split(/[\s-]+/);
-    for (let i = 0; i < ss.length; i++) {
-        ss[i] = ss[i].slice(0, 1).toUpperCase() + ss[i].slice(1);
+    let l = s.length
+    for (let i = 0; i < l; i++) {
+        s[i] = s[i].toLowerCase()
     }
-    return ss.join(' ');
+    return s.join('-');
 }
 
