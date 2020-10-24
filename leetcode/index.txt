@@ -1,2 +1,0 @@
-1 Two Sum
-187 Repeated DNA Sequences
